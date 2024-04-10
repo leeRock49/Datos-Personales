@@ -1,0 +1,25 @@
+body {
+  background-color: black;
+  color: green;
+}
+
+p {
+  text-align: center;
+  font-size: 80px
+}
+
+input[type="text"] {
+  text-align: center;
+  font-size: 60px;
+  height: 80px;
+  width: 600px;
+  margin-left: 80px;
+
+}
+
+button {
+  text-align: center;
+  font-size: 60px;
+
+
+}

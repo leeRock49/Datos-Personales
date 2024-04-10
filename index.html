@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Formulario</title>
+    <meta name=viewport width="width=1200">
+    <link rel=stylesheet href="styles.css">
+  </head>
+
+  <body>
+
+    <p><strong id="negrita" >Datos Personales</strong></p>
+    <br><br><br><br>
+    <input type="text" id="texto" placeholder="Ingresa Tu Edad :" onkeydown="handleKeyPress(event, mostrar)">
+    <button onclick="mostrar()">Enviar</button>
+    <br><br><br><br><br><br>
+    <input type="text" id="texto1" placeholder="Ingresa Tu Nombre : " onkeydown="handleKeyPress(event, saludar)">
+    <button onclick="saludar()">Enviar</button>
+     <br><br><br><br><br><br>
+    <input type="text" id="texto2" placeholder="Ingresa Tu Apellido : " onkeydown="handleKeyPress(event, amenazar)">
+    <button onclick="amenazar()">Enviar</button>
+
+    <script>
+      function handleKeyPress(event, func) {
+        if (event.keyCode === 13) {
+          event.preventDefault();
+          func();
+        }
+      }
+
+      function mostrar(){
+        var cantidad = document.getElementById("texto").value;
+        if (cantidad <= 17){
+          alert("Eres Un Crio");
+        } else if(cantidad >= 18 && cantidad <= 79){
+          alert("Eres Un Veterano")
+        } else if(cantidad >= 80 && cantidad <= 89){
+          alert("Eres Un Vejestorio");
+        } else if(cantidad >= 90 && cantidad <= 99){
+          alert("Mejor Voy Comprando Flores");
+        } else if(cantidad >= 100){
+          alert("Creo Que Te Vi En Una Película De Jurassic Park");
+        } else{
+          alert("Eres Un Crío");
+        }
+      }
+
+      function saludar(){
+        var nombre = document.getElementById("texto1").value;
+        if (nombre.toLowerCase() === "britani"){
+          alert("Ese nombre es de Hacherita");
+        } else{
+          alert("Vaya Nombrecito De Mierda");
+        }
+      }
+
+      function amenazar(){
+        var apellido = document.getElementById("texto2").value;
+        if (apellido.toLowerCase() === "wick"){
+          alert("Disculpe Señor Wick");
+        } else{
+          alert("Desaparece De Mi Vista");
+        }
+      }
+    </script>
+  </body>
+</html>
+
